@@ -2,8 +2,8 @@ import { DefaultTheme } from "styled-components";
 
 const defaultTheme: DefaultTheme = {
   colors: {
-    white: "#fff",
-    black: "#000",
+    darkGreen: "#095d40",
+    lightGreen: "#71998b",
   },
 
   breakpoints: {

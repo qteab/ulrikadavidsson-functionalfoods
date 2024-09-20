@@ -10,11 +10,6 @@ const GlobalStyle = createGlobalStyle`
 
 export const MainSection = styled.section`
   width: 100%;
-  margin: 50px 0;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin: 100px 0;
-  }
 `;
 
 export const MainInner = styled.div`
@@ -23,7 +18,6 @@ export const MainInner = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 0px 16px;
   margin: 0 auto;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {

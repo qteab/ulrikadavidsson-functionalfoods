@@ -11,7 +11,7 @@ export const nlToBr = (text: string) =>
   ));
 
 export const gatsbyImageHelper = (image: IWPImage) => {
-  const imageData = image.localFile?.childImageSharp?.gatsbyImageData
+  const imageData = image?.localFile?.childImageSharp?.gatsbyImageData
     ? getImage(image.localFile.childImageSharp.gatsbyImageData)
     : null;
 

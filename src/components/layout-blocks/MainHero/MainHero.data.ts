@@ -11,10 +11,12 @@ module.exports = () => `
     }
     altText
   }
-  title
   mediaType
   backgroundVideo {
       mimeType
       mediaItemUrl
     }
+  ingress
+  buttonText
+  additionalText
 `;

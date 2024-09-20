@@ -7,18 +7,88 @@ const Section = styled(MainSection)`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  min-height: 570px;
+  height: calc(100vh - 80px);
   position: relative;
-  padding-top: 110px;
-  margin: 60px 0 100px 0;
+  margin: 0;
 `;
 
-const Inner = styled(MainInner)``;
+const Inner = styled(MainInner)`
+  align-items: center;
+  justify-content: center;
 
-const Title = styled(h1)`
-  color: ${({ theme }) => theme.colors.white};
-  max-width: 500px;
+  .content-overlay {
+    z-index: 1;
+    margin: 0 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 32px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-button {
+    width: 250px;
+    height: 47px;
+    border-radius: 25px;
+    border: none;
+    background-color: ${({ theme }) => theme.colors.lightGreen};
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-family: Montserrat;
+  }
+
+  .home-button:hover {
+    background-color: ${({ theme }) => theme.colors.darkGreen};
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: 745px) {
+    .content-overlay {
+      width: 560px;
+      padding: 54px 46px;
+    }
+
+    .home-button {
+      width: 308px;
+      height: 47px;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .content-overlay {
+      width: 840px;
+      padding: 62px 40px;
+    }
+
+    .home-text {
+      font-size: 24px;
+    }
+
+    .ask-text {
+      font-size: 20px;
+      margin-top: 40px;
+    }
+
+    .home-button {
+      width: 308px;
+      height: 47px;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .signature-text {
+      font-size: 24px;
+    }
+  }
 `;
 
 const BackgroundImage = styled(GatsbyImage)`
@@ -66,12 +136,17 @@ const VideoContainer = styled.div`
   }
 `;
 
+const Button = styled.button``;
+
+const TextWrapper = styled.div``;
+
 const S = {
   Section,
   Inner,
-  Title,
   BackgroundImage,
   VideoContainer,
+  Button,
+  TextWrapper,
 };
 
 export default S;

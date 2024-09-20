@@ -26,7 +26,6 @@ const PageTemplate: React.FC<IPageTemplate> = ({ pageContext }) => {
         <Header />
         <Main>
           <Flexible components={pageContext.flexible.components} />
-          <Footer />
           <CookieConsent />
         </Main>
       </Body>
@@ -42,6 +41,10 @@ export function Head({ pageContext }: IPageTemplate) {
       <GtmContainer />
       <html lang="sv" />
       <Seo {...pageContext.seo} lang="sv" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
     </>
   );
 }

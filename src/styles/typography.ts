@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const h1Css = css`
-  font-family: sans-serif;
   font-size: 50px;
+  color: ${({ theme }) => theme.colors.darkGreen};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 32px;
@@ -14,8 +14,8 @@ export const h1 = styled.h1`
 `;
 
 export const h2Css = css`
-  font-family: sans-serif;
   font-size: 46px;
+  color: ${({ theme }) => theme.colors.darkGreen};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 30px;
@@ -27,8 +27,8 @@ export const h2 = styled.h2`
 `;
 
 export const h3Css = css`
-  font-family: sans-serif;
-  font-size: 32px;
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.darkGreen};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 26px;
@@ -40,8 +40,8 @@ export const h3 = styled.h3`
 `;
 
 export const h4Css = css`
-  font-family: sans-serif;
   font-size: 24px;
+  color: ${({ theme }) => theme.colors.darkGreen};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 18px;
@@ -53,8 +53,8 @@ export const h4 = styled.h4`
 `;
 
 export const h5Css = css`
-  font-family: sans-serif;
   font-size: 18px;
+  color: ${({ theme }) => theme.colors.darkGreen};
 `;
 
 export const h5 = styled.h5`
@@ -62,8 +62,8 @@ export const h5 = styled.h5`
 `;
 
 export const h6Css = css`
-  font-family: sans-serif;
   font-size: 14px;
+  color: ${({ theme }) => theme.colors.darkGreen};
 `;
 
 export const h6 = styled.h6`
@@ -71,8 +71,8 @@ export const h6 = styled.h6`
 `;
 
 export const ParagraphCss = css`
-  font-family: sans-serif;
-  font-size: 18px;
+  color: ${({ theme }) => theme.colors.darkGreen};
+  font-size: 22px;
 `;
 
 export const Paragraph = styled.p`
@@ -80,7 +80,6 @@ export const Paragraph = styled.p`
 `;
 
 export const ParagraphBigCss = css`
-  font-family: sans-serif;
   font-size: 24px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -93,7 +92,6 @@ export const ParagraphBig = styled.p`
 `;
 
 export const ParagraphSmallCss = css`
-  font-family: sans-serif;
   font-size: 20px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -106,7 +104,6 @@ export const ParagraphSmall = styled.p`
 `;
 
 export const DetailsBigCss = css`
-  font-family: sans-serif;
   font-size: 40px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -119,7 +116,6 @@ export const DetailsBig = styled.p`
 `;
 
 export const DetailsSmallCss = css`
-  font-family: sans-serif;
   font-size: 20px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -166,6 +162,7 @@ export const SecondaryButtonCss = css`
 export const WysiwygCss = css`
   p {
     ${ParagraphCss}
+    margin-bottom: 20px;
   }
   h1,
   h2,
@@ -206,10 +203,13 @@ export const WysiwygCss = css`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.black};
     text-decoration: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.black};
-    transition: border-bottom 0.2s ease-in-out;
+    font-size: 14px;
+    color: ${({ theme }) => theme.colors.darkGreen};
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   img {
@@ -225,11 +225,13 @@ export const WysiwygCss = css`
   }
 
   strong {
-    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.darkGreen};
   }
 
   em {
-    font: sans-serif italic;
+    font: Montserrat italic;
   }
 `;
 

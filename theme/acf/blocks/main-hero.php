@@ -6,13 +6,15 @@ use Extended\ACF\ConditionalLogic;
 use Extended\ACF\Fields\Image;
 use Extended\ACF\Fields\File;
 use Extended\ACF\Fields\Text;
+use Extended\ACF\Fields\WysiwygEditor;
 
 return Layout::make('Main Hero')
   ->layout('block')
   ->fields([
     graphql_label('Main Hero'),
-    Text::make('Title', 'title')
-      ->required(),
+    WysiwygEditor::make('Ingress'),
+    Text::make('Button text'),
+    WysiwygEditor::make('Additional text'),
     ButtonGroup::make('Media Type', 'media-type')
       ->wrapper(['width' => '20%'])
       ->choices([
