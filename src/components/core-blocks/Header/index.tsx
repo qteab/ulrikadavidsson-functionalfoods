@@ -25,7 +25,7 @@ const emptyForm = (): FormData => ({
 const emptyFormState = (): FormState => ({
   isLoading: false,
   data: emptyForm(),
-  success: false,
+  success: true,
 });
 
 const Header = () => {

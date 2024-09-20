@@ -70,6 +70,7 @@ const Header = styled.header<HeaderProps>`
     font-size: 18px;
     text-align: center;
     height: 100%;
+    padding: 33px 0;
     display: flex;
     align-items: center;
   }
