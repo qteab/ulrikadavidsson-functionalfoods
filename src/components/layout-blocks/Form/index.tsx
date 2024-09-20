@@ -139,7 +139,12 @@ const Form: React.FC<FormProps> = () => {
           </div>
           {formState.isLoading && <p className="status-text">Skickar...</p>}
           {formState.success && (
-            <p className="status-text">Tack för din fråga!</p>
+            <p className="status-text">Frågan skickad till Ulrika. Tack!</p>
+          )}
+          {formState.error && (
+            <p className="status-text">
+              Ett fel inträffade, vänligen försök igen.
+            </p>
           )}
         </form>
       </div>
