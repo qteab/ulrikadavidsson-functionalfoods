@@ -1,0 +1,15 @@
+{
+  "name": "qteab/gatsby-wordpress-template",
+  "type": "wordpress-theme",
+  "require": {
+    "vinkla/extended-acf": "^13.1.1",
+    "php": "^8.0"
+  },
+  "license": "mit",
+  "authors": [
+    {
+      "name": "qteab"
+    }
+  ],
+  "minimum-stability": "stable"
+}
