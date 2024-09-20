@@ -1,9 +1,7 @@
 import * as React from "react";
-
 import S from "./Header.styled";
-import useHeaderData from "./useHeaderData";
 import axios from "axios";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 type FormData = {
   formName: string;
@@ -25,13 +23,11 @@ const emptyForm = (): FormData => ({
 const emptyFormState = (): FormState => ({
   isLoading: false,
   data: emptyForm(),
-  success: true,
+  success: false,
 });
 
 const Header = () => {
   const [formState, setFormState] = React.useState(emptyFormState());
-  const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
-  const data = useHeaderData();
 
   const {
     register,

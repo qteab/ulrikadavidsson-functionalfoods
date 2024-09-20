@@ -1,9 +1,7 @@
 import { MainInner } from "@/styles/global";
 import styled from "styled-components";
 
-type HeaderProps = {};
-
-const Header = styled.header<HeaderProps>`
+const Header = styled.header`
   width: 100%;
 
   .logo-container {
@@ -70,7 +68,7 @@ const Header = styled.header<HeaderProps>`
     font-size: 18px;
     text-align: center;
     height: 100%;
-    padding: 33px 0;
+    padding: 34px 0;
     display: flex;
     align-items: center;
   }
