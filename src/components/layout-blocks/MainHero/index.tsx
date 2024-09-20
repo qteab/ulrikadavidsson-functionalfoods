@@ -1,4 +1,4 @@
-import { IWPImage } from "@/src/types";
+import { IWPImage, IWPLink } from "@/src/types";
 import React from "react";
 import S from "./MainHero.styled";
 import { gatsbyImageHelper } from "@/src/helpers";
@@ -12,8 +12,8 @@ export interface Props {
     mimeType: string;
   };
   ingress: string;
-  buttonText: string;
   additionalText: string;
+  button: IWPLink;
 }
 
 const MainHero: React.FC<Props> = ({
@@ -21,8 +21,8 @@ const MainHero: React.FC<Props> = ({
   backgroundImage,
   backgroundVideo,
   ingress,
-  buttonText,
   additionalText,
+  button,
 }) => {
   // create gatsby-image-data
   const backgroundImageData = gatsbyImageHelper(backgroundImage);
@@ -48,8 +48,14 @@ const MainHero: React.FC<Props> = ({
       <S.Inner>
         <div className="content-overlay">
           {ingress && <Wysiwyg dangerouslySetInnerHTML={{ __html: ingress }} />}
-          {buttonText && (
-            <S.Button className="home-button">{buttonText}</S.Button>
+          {button && (
+            <S.Button
+              className="home-button"
+              to={button.url}
+              target={button.target}
+            >
+              {button.title}
+            </S.Button>
           )}
           {additionalText && (
             <Wysiwyg dangerouslySetInnerHTML={{ __html: additionalText }} />

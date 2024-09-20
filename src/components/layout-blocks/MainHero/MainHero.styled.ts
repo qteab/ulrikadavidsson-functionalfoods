@@ -1,5 +1,6 @@
 import { MainInner, MainSection } from "@/styles/global";
 import { h1 } from "@/styles/typography";
+import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
@@ -26,27 +27,6 @@ const Inner = styled(MainInner)`
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .home-button {
-    width: 250px;
-    height: 47px;
-    border-radius: 25px;
-    border: none;
-    background-color: ${({ theme }) => theme.colors.lightGreen};
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    font-family: Montserrat;
-  }
-
-  .home-button:hover {
-    background-color: ${({ theme }) => theme.colors.darkGreen};
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   }
 
   @media (min-width: 745px) {
@@ -136,7 +116,51 @@ const VideoContainer = styled.div`
   }
 `;
 
-const Button = styled.button``;
+const Button = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  &.home-button {
+    width: 250px;
+    height: 47px;
+    border-radius: 25px;
+    border: none;
+    background-color: ${({ theme }) => theme.colors.lightGreen};
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-family: Montserrat;
+  }
+
+  &.home-button:hover {
+    background-color: ${({ theme }) => theme.colors.darkGreen};
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: 745px) {
+    .home-button {
+      width: 308px;
+      height: 47px;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .home-button {
+      width: 308px;
+      height: 47px;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+  }
+`;
 
 const TextWrapper = styled.div``;
 

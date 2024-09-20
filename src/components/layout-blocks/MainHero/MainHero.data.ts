@@ -17,6 +17,10 @@ module.exports = () => `
       mediaItemUrl
     }
   ingress
-  buttonText
   additionalText
+  button {
+    target
+    title
+    url
+  }
 `;

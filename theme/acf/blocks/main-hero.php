@@ -5,7 +5,7 @@ use Extended\ACF\Fields\ButtonGroup;
 use Extended\ACF\ConditionalLogic;
 use Extended\ACF\Fields\Image;
 use Extended\ACF\Fields\File;
-use Extended\ACF\Fields\Text;
+use Extended\ACF\Fields\Link;
 use Extended\ACF\Fields\WysiwygEditor;
 
 return Layout::make('Main Hero')
@@ -13,7 +13,7 @@ return Layout::make('Main Hero')
   ->fields([
     graphql_label('Main Hero'),
     WysiwygEditor::make('Ingress'),
-    Text::make('Button text'),
+    Link::make('Button'),
     WysiwygEditor::make('Additional text'),
     ButtonGroup::make('Media Type', 'media-type')
       ->wrapper(['width' => '20%'])
