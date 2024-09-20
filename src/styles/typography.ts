@@ -31,7 +31,7 @@ export const h3Css = css`
   color: ${({ theme }) => theme.colors.darkGreen};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    font-size: 26px;
+    font-size: 18px;
   }
 `;
 
@@ -73,6 +73,10 @@ export const h6 = styled.h6`
 export const ParagraphCss = css`
   color: ${({ theme }) => theme.colors.darkGreen};
   font-size: 22px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 18px;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -128,19 +132,20 @@ export const DetailsSmall = styled.p`
 `;
 
 export const PrimaryButtonCss = css`
-  ${ParagraphCss};
-  padding: 8px 16px;
+  padding: 12px 16px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.black};
-  border: 1px solid ${({ theme }) => theme.colors.black};
-  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.lightGreen};
+  color: white;
   cursor: pointer;
   width: fit-content;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.white};
@@ -204,11 +209,15 @@ export const WysiwygCss = css`
 
   a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     color: ${({ theme }) => theme.colors.darkGreen};
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+      font-size: 14px;
     }
   }
 

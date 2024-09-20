@@ -20,7 +20,6 @@ const Header = styled.header<HeaderProps>`
   .newsletter-container {
     background-color: ${({ theme }) => theme.colors.darkGreen};
     padding: 0 20px;
-    height: 60px;
     min-width: 300px;
 
     @media (min-width: 1250px) {
@@ -90,7 +89,6 @@ const Header = styled.header<HeaderProps>`
     }
 
     .newsletter-container {
-      height: 82px;
       margin-left: auto;
     }
 
@@ -125,7 +123,6 @@ const Header = styled.header<HeaderProps>`
     }
 
     .newsletter-container {
-      height: 88px;
       padding: 0 50px;
     }
 

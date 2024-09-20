@@ -1,4 +1,5 @@
 import {
+  Paragraph,
   ParagraphBig,
   PrimaryButtonCss,
   Wysiwyg,
@@ -31,9 +32,9 @@ const Container = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 550px;
   padding: 24px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -62,7 +63,7 @@ const Overlay = styled.div`
   left: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: black;
   opacity: 0.5;
   z-index: 999;
 `;
@@ -70,9 +71,10 @@ const Overlay = styled.div`
 const Title = styled(h3)`
   margin-bottom: 8px;
   text-align: center;
+  font-size: 24px !important;
 `;
 
-const SubTitle = styled(ParagraphBig)`
+const SubTitle = styled(Paragraph)`
   margin-bottom: 32px;
 `;
 
