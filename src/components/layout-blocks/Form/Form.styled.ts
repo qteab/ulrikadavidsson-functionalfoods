@@ -1,5 +1,12 @@
-import { MainInner } from "@/styles/global";
+import { MainInner, MainSection } from "@/styles/global";
 import styled from "styled-components";
+
+const Section = styled(MainSection)<{ $bgImage: string }>`
+  background-image: url(${({ $bgImage }) => $bgImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
 
 const Inner = styled(MainInner)`
   .navbar {
@@ -143,6 +150,7 @@ const Inner = styled(MainInner)`
 `;
 
 const S = {
+  Section,
   Inner,
 };
 
